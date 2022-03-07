@@ -9,6 +9,7 @@ public class InjectionDeDependancesApplication {
     public static void main(String[] args) {
         SpringApplication.run(InjectionDeDependancesApplication.class, args);
         UserService userService = new UserService();
+        userService.setUserDAO(new UserDAO());
         String name = userService.getFullName();
 
         System.out.println("####################################");
