@@ -8,6 +8,12 @@ public class InjectionDeDependancesApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(InjectionDeDependancesApplication.class, args);
+        UserService userService = new UserService();
+        String name = userService.getFullName();
+
+        System.out.println("####################################");
+        System.out.println(name);
+        System.out.println("####################################");
     }
 
 }
